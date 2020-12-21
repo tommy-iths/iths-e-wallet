@@ -2,7 +2,7 @@
 
 #### Instruktioner
 
-Ni ska bygga en digital plånbok. Assets och mockups finns i den här mappen.
+Ni ska bygga en digital plånbok. Assets och mockups finns i det här repot.
 Forka det här repot och ladda upp din källkod till det forkade repot.
 
 #### Specifikation
