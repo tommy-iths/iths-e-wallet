@@ -90,7 +90,7 @@
           <option value="ninja">Ninja</option>
         </select>
       </div>
-      <button>Lägg till kort!</button>
+      <button>ADD CARD</button>
     </form>
   </div>
 </template>
@@ -137,14 +137,26 @@ export default {
       this.$root.submitCreditcards(this.form);
     },
     submitCard() {
-      this.$root.creditcards.push({
-        holder: this.formData.holder,
-        number: this.cardNumSpacing(this.formData.number),
-        expireMonth: this.formData.expireMonth,
-        expireYear: this.formData.expireYear,
-        ccv: this.formData.ccv,
-        vendor: this.formData.vendor,
-      });
+      try {
+        this.$root.creditcards.push({
+          holder: this.formData.holder,
+          number: this.cardNumSpacing(this.formData.number),
+          expireMonth: this.formData.expireMonth,
+          expireYear: this.formData.expireYear,
+          ccv: this.formData.ccv,
+          vendor: this.formData.vendor,
+        });
+      } catch (err) {
+        console.log(err);
+      } finally {
+        (this.$root.creditcardForm.holder = "FIRSTNAME LASTNAME"),
+          (this.$root.creditcardForm.number = "XXXX XXXX XXXX XXXX");
+        (this.$root.creditcardForm.expireMonth = "MM"),
+          (this.$root.creditcardForm.expireYear = "YY"),
+          (this.$root.creditcardForm.ccv = ""),
+          (this.$root.creditcardForm.vendor = "blank");
+        this.$router.push("/");
+      }
     },
     cardNumSpacing(s) {
       return s.toString().replace(/\d{4}(?=.)/g, "$& ");

@@ -2,7 +2,6 @@
   <header>
     {{ title }}
     <div id="nav"><router-link to="/">Card</router-link></div>
-    |
     <div id="nav"><router-link to="/Addcard">Addcard</router-link></div>
     <router-view />
   </header>
