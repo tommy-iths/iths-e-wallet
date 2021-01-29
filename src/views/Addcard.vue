@@ -7,15 +7,19 @@
       :expireYear="expireYear"
       :vendor="vendor"
     ></creditcard>
-    <CreditcardForm />
+    <CreditcardForm>
+      <base-button slot="submit-card" class="flat">ADD CARD!</base-button>
+      <base-button slot="reset-card" class="clear">RESET</base-button>
+    </CreditcardForm>
   </div>
 </template>
 
 <script>
+import BaseButton from "../components/BaseButton.vue";
 import Creditcard from "../components/Creditcard.vue";
 import CreditcardForm from "../components/CreditcardForm.vue";
 export default {
-  components: { CreditcardForm, Creditcard },
+  components: { CreditcardForm, Creditcard, BaseButton },
   data() {
     return {};
   },
