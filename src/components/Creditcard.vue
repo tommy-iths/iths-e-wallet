@@ -129,6 +129,7 @@ li {
 
 .card__expire {
   grid-area: card__expire;
+  text-align: left;
 }
 
 .default {

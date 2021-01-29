@@ -90,7 +90,8 @@
           <option value="ninja">Ninja</option>
         </select>
       </div>
-      <button>ADD CARD</button>
+      <slot name="submit-card"></slot>
+      <slot name="reset-card"></slot>
     </form>
   </div>
 </template>
