@@ -2,7 +2,7 @@
   <div class="wrapper">
     <creditcard
       :holder="holder"
-      :number="cardNumSpacing(number)"
+      :number="number"
       :expireMonth="expireMonth"
       :expireYear="expireYear"
       :vendor="vendor"
@@ -38,11 +38,6 @@ export default {
     },
     vendor() {
       return this.$root.creditcardForm.vendor;
-    },
-  },
-  methods: {
-    cardNumSpacing(s) {
-      return s.toString().replace(/\d{4}(?=.)/g, "$& ");
     },
   },
 };
