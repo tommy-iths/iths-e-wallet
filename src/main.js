@@ -42,6 +42,14 @@ new Vue({
         ccv: "",
         vendor: "blank",
       },
+      creditcardDummyData: {
+        holder: "FIRSTNAME LASTNAME",
+        number: "XXXX XXXX XXXX XXXX",
+        expireMonth: "MM",
+        expireYear: "YY",
+        ccv: "",
+        vendor: "blank",
+      },
     }
   },
   render: h => h(App)
