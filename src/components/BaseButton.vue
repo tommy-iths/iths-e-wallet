@@ -28,12 +28,7 @@ button {
   border: 1px solid #000;
 }
 
-.clear {
-  background-color: #de2e4d;
-}
-.clear:hover {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #de2e4d;
+.nav {
+  background-color: green;
 }
 </style>

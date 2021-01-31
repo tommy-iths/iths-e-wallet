@@ -88,6 +88,7 @@ li {
   background-color: #d4d4d4;
   padding: 10px;
   border-radius: 14px;
+  box-shadow: 0 4px 6px 0 rgb(0 0 0 / 30%);
 }
 
 .card__placeholder {
